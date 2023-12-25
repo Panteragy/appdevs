@@ -26,34 +26,6 @@
             /* Add your logo image here */
         }
 
-        #drawer {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            cursor: pointer;
-            color: white;
-        }
-
-        #drawer ul {
-            list-style: none;
-            padding: 0;
-            display: none;
-        }
-
-        #drawer ul li {
-            padding: 10px;
-            border-bottom: 1px solid white;
-        }
-
-        #downloadPage {
-            color: blue;
-            text-decoration: underline;
-        }
-
-        #aboutPage {
-            color: white;
-        }
-
         #title {
             font-size: 24px;
             font-weight: bold;
@@ -61,6 +33,19 @@
         }
 
         #description {
+            margin-top: 10px;
+        }
+
+        #teleportDownload {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #teleportAbout {
+            color: white;
+            cursor: pointer;
             margin-top: 10px;
         }
 
@@ -75,35 +60,14 @@
 <body>
     <div id="dashboard">
         <div id="logo"></div>
-        <div id="drawer">&#9776;</div>
         <div id="title">Dashboard Title</div>
         <div id="description">Dashboard Description goes here.</div>
+        
+        <!-- Teleporting texts -->
+        <div id="teleportDownload" onclick="window.location.href='download-page.html'">Teleport to Download Page</div>
+        <div id="teleportAbout" onclick="window.location.href='about-page.html'">Teleport to About Page</div>
+
         <div id="copyright">&copy; 2023 Your Company</div>
     </div>
-
-    <script>
-        const drawer = document.getElementById('drawer');
-        const pagesList = document.querySelector('#drawer ul');
-
-        drawer.addEventListener('click', () => {
-            pagesList.style.display = pagesList.style.display === 'none' ? 'block' : 'none';
-        });
-    </script>
-
-    <!-- Anchor tags for teleporting to other pages -->
-    <a id="downloadPageAnchor" href="download-page.html"></a>
-    <a id="aboutPageAnchor" href="about-page.html"></a>
-
-    <script>
-        // Trigger teleport when clicking on "Download Page"
-        document.getElementById('downloadPageAnchor').addEventListener('click', () => {
-            window.location.href = 'download-page.html';
-        });
-
-        // Trigger teleport when clicking on "About Page"
-        document.getElementById('aboutPageAnchor').addEventListener('click', () => {
-            window.location.href = 'about-page.html';
-        });
-    </script>
 </body>
 </html>
