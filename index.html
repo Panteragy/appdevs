@@ -14,7 +14,7 @@
         }
 
         #dashboard {
-            background-color: grey;
+            background-color: black;
             padding: 20px;
             box-sizing: border-box;
         }
@@ -91,20 +91,19 @@
     </script>
 
     <!-- Anchor tags for teleporting to other pages -->
-    <a id="downloadPage" href="download-page.html"></a>
-    <a id="aboutPage" href="about-page.html"></a>
+    <a id="downloadPageAnchor" href="download-page.html"></a>
+    <a id="aboutPageAnchor" href="about-page.html"></a>
 
     <script>
         // Trigger teleport when clicking on "Download Page"
-        document.getElementById('downloadPage').addEventListener('click', () => {
+        document.getElementById('downloadPageAnchor').addEventListener('click', () => {
             window.location.href = 'download-page.html';
         });
 
         // Trigger teleport when clicking on "About Page"
-        document.getElementById('aboutPage').addEventListener('click', () => {
+        document.getElementById('aboutPageAnchor').addEventListener('click', () => {
             window.location.href = 'about-page.html';
         });
     </script>
 </body>
-  </html>
-  
+</html>
