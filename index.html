@@ -3,71 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TS AppDev Dashboard</title>
+    <title>Your Portfolio Title</title>
     <style>
         body {
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: black;
-            color: white;
+            background-color: #f4f4f4;
         }
 
-        #dashboard {
-            background-color: black;
-            padding: 20px;
-            box-sizing: border-box;
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
         }
 
         #logo {
-            width: 50px; /* Adjust size as needed */
-            height: 50px; /* Adjust size as needed */
-            background-color: white; /* Logo background color */
-            /* Add your logo image here */
+            width: 50px; /* Adjust the size as needed */
+            height: auto;
+            display: inline-block;
+            margin-right: 10px;
         }
 
-        #title {
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 20px;
+        section {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
 
-        #description {
-            margin-top: 10px;
+        h1 {
+            color: #333;
         }
 
-        #teleportDownload {
-            color: blue;
-            text-decoration: underline;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        #teleportAbout {
-            color: white;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        #copyright {
-            position: absolute;
-            bottom: 10px;
-            left: 20px;
-            color: white;
+        p {
+            color: #666;
         }
     </style>
 </head>
 <body>
-    <div id="dashboard">
-        <div id="logo"></div>
-        <div id="title">Dashboard Title</div>
-        <div id="description">Dashboard Description goes here.</div>
-        
-        <!-- Teleporting texts -->
-        <div id="teleportDownload" onclick="window.location.href='download-page.html'">Teleport to Download Page</div>
-        <div id="teleportAbout" onclick="window.location.href='about-page.html'">Teleport to About Page</div>
+    <header>
+        <img id="logo" src="your-logo.png" alt="Logo">
+        <h1>Your Name</h1>
+    </header>
 
-        <div id="copyright">&copy; 2023 Your Company</div>
-    </div>
+    <section>
+        <h1>Your Portfolio Title</h1>
+        <p>Description about your amazing work and skills.</p>
+        <!-- Add more sections for your projects, skills, etc. -->
+    </section>
 </body>
 </html>
