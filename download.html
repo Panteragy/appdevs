@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #preload-container {
+            text-align: center;
+        }
+
+        #progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #progress {
+            height: 100%;
+            width: 0;
+            background-color: #4caf50;
+            border-radius: 10px;
+            transition: width 5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div id="preload-container">
+        <div id="progress-bar">
+            <div id="progress"></div>
+        </div>
+    </div>
+
+    <script>
+        // Simulate the redirect after 5 seconds
+        setTimeout(function () {
+            window.location.href = 'https://www.mediafire.com/file/qhcewawe1fxja5e/TS+AppDev.apk/file?dkey=a4l9nab2c72&r=697';
+        }, 5000);
+
+        // Update the progress bar
+        let progress = 0;
+        const progressBar = document.getElementById('progress');
+
+        function updateProgressBar() {
+            if (progress <= 100) {
+                progressBar.style.width = progress + '%';
+                progress += 1;
+                setTimeout(updateProgressBar, 50);
+            }
+        }
+
+        updateProgressBar();
+    </script>
+</body>
+</html>
