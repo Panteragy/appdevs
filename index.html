@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TS AppDev Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        #dashboard {
+            background-color: grey;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #logo {
+            width: 50px; /* Adjust size as needed */
+            height: 50px; /* Adjust size as needed */
+            background-color: white; /* Logo background color */
+            /* Add your logo image here */
+        }
+
+        #drawer {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            color: white;
+        }
+
+        #drawer ul {
+            list-style: none;
+            padding: 0;
+            display: none;
+        }
+
+        #drawer ul li {
+            padding: 10px;
+            border-bottom: 1px solid white;
+        }
+
+        #downloadPage {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        #aboutPage {
+            color: white;
+        }
+
+        #title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        #description {
+            margin-top: 10px;
+        }
+
+        #copyright {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="dashboard">
+        <div id="logo"></div>
+        <div id="drawer">&#9776;</div>
+        <div id="title">Dashboard Title</div>
+        <div id="description">Dashboard Description goes here.</div>
+        <div id="copyright">&copy; 2023 Your Company</div>
+    </div>
+
+    <script>
+        const drawer = document.getElementById('drawer');
+        const pagesList = document.querySelector('#drawer ul');
+
+        drawer.addEventListener('click', () => {
+            pagesList.style.display = pagesList.style.display === 'none' ? 'block' : 'none';
+        });
+    </script>
+
+    <!-- Anchor tags for teleporting to other pages -->
+    <a id="downloadPage" href="download-page.html"></a>
+    <a id="aboutPage" href="about-page.html"></a>
+
+    <script>
+        // Trigger teleport when clicking on "Download Page"
+        document.getElementById('downloadPage').addEventListener('click', () => {
+            window.location.href = 'download-page.html';
+        });
+
+        // Trigger teleport when clicking on "About Page"
+        document.getElementById('aboutPage').addEventListener('click', () => {
+            window.location.href = 'about-page.html';
+        });
+    </script>
+</body>
+  </html>
+  
